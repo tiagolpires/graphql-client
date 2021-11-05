@@ -1,0 +1,33 @@
+.card {
+    width: 100%;
+    margin-bottom: 5px;
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #efefef;
+    font-size: 14px;
+}
+
+.card-name-container {
+    display: flex;
+    align-items: center;
+}
+
+.card-icon {
+    width: 16px;
+    height: 16px;
+    background-color: #0b4bf1;
+    margin-right: 16px;
+    border-radius: 50%;
+}
+
+@media(max-width: 768px) {
+    .card {
+        flex-direction: column;
+    }
+
+    .card span {
+        margin: 10px 0;
+    }
+}
