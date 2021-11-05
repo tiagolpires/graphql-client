@@ -1,8 +1,20 @@
 import Dashboard from './pages/Dashboard'
+import {
+  ApolloClient,
+  InMemoryCache,
+  ApolloProvider
+} from "@apollo/client";
+
+const client = new ApolloClient({
+  uri: 'http://localhost:3000/',
+  cache: new InMemoryCache()
+});
 
 function App() {
   return (
-    <Dashboard/>
+    <ApolloProvider client={client}>
+      <Dashboard/>
+    </ApolloProvider>
   );
 }
 
